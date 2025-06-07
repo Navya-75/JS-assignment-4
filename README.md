@@ -22,3 +22,26 @@ HTML
 CSS (basic styling)
 
 JavaScript (vanilla)
+
+
+*****TASK-2*****
+
+🔢 Prime Number Generator
+A simple web app that generates all prime numbers in a given range.
+
+✅ Features
+Takes start and end input values.
+
+Displays all prime numbers in the range.
+
+Uses basic HTML, JavaScript, and a bit of CSS (optional).
+
+🚀 How to Use
+Enter the start and end numbers.
+
+Click Generate.
+
+View primes in the output area.
+
+
+*****TASK-3*****

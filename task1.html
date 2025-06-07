@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Number Validation</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h1{
+            margin-bottom:100px;
+        }
+        input[type=number]{
+            margin-bottom: 60px;
+            width:175px;
+        }
+        label{
+            font-size: 18px;
+        }
+        input[type=button]{
+            font-size: 18px;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <h1>Mobile Number Validation using JavaScript</h1>
+    <form>
+    <label>Enter Mobile Number:</label>
+    <input type="text" id="num" placeholder="Enter 10 Digit Mobile Num" onkeyup="validate()"><br><br>
+   
+    <input type="button" value="Validate" onclick="validate()">
+    </form>
+
+    <script>
+        function validate(){
+            var Num = document.getElementById("num").value
+            
+            if(Num.length == 10 && !isNaN(Num)){
+                alert("Number is submitted");
+            }
+            else{
+                alert("Enter a valid number");
+            }
+        }
+    </script>
+</body>
+</html>

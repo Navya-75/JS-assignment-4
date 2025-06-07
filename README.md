@@ -62,3 +62,24 @@ Minimal CSS styling
 Username is required
 
 Password is required and must be at least 8 characters
+
+*****TASK-4*****
+
+🎂 Age Calculator
+A simple JavaScript-based tool to calculate your age in years, months, and days based on your date of birth.
+
+✅ Features
+Select date of birth using a date picker
+
+Displays calculated age in:
+
+Years
+
+Months
+
+Days
+
+Fully styled with basic CSS layout
+
+📌 Validation
+Alerts the user if no date is selected

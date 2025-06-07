@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Prime Number Generator</h1>
+    <form>
+        <label>Start:</label>
+        <input type="text" id="start"><br><br>
+        <label>End:</label>
+        <input type="text" id="end"><br><br>
+        <label>Prime Numbers:</label>
+        <textarea id="area"></textarea><br><br>
+        <input type="button" value="Generate" onclick="generatePrimes()">
+    </form>
+    <script>
+        function Isprime(num){
+            if(num<2){
+                return false;
+            }
+            for(let i=2; i<=Math.sqrt(num); i++){
+                if(num % i === 0){
+                     return false;
+                }  
+            } 
+             return true;
+        }
+        function generatePrimes(){
+             let start = parseInt(document.getElementById("start").value);
+             let end = parseInt(document.getElementById("end").value);
+             let primes = [];
+
+             for(let i=start; i<=end; i++){
+                if(Isprime(i)){
+                    primes.push(i);
+
+                }
+
+             }
+             document.getElementById("area").value = primes.join(", ");
+        }
+
+
+    </script>
+</body>
+</html>

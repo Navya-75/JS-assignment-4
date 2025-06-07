@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(60, 0, 255);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .box{
+            display: flex;
+        }
+
+        .year,.month,.day{
+            height: 120px;
+            width: 120px;
+            background-color: white;
+            margin: 20px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+        }
+        form{
+            background-color: white;
+            height:40px;
+            width: 500px;
+            padding: 20px;
+            margin-bottom: 100px;
+            border-radius: 15px;
+        }
+
+        input[type="date"]{
+            height: 30px;
+            width:200px ;
+            margin-right: 100px;
+            font-size: 18px;
+        }
+        input[type="button"]{
+            background-color: blue;
+            color: white;
+            font-size: 18px;
+            padding:5px;
+            height: 40px;
+            width: 100px;
+        }
+        span{
+            font-size: 25px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; margin-bottom: 100px;">AGE CALCULATOR</h1>
+    <form>
+        <input type="date" id="date">
+        <input type="button" value="calculator" onclick="caluculate_age()">
+    </form>
+    
+       <div class="box">
+         <div class="year"><span id="years">00<br><br></span>Year</div>
+        <div class="month"><span id="months">00<br><br></span>Month</div>
+        <div class="day"><span id="days">00<br><br></span>Day</div>
+       </div>
+   
+       <script>
+        function caluculate_age(){
+            let userInput = document.getElementById("date").value;
+
+            if(!userInput){
+                alert("enter a input");
+                return;
+            }
+
+            let enteredDate = new Date(userInput);
+            let todayDate = new Date();
+
+            let years = todayDate.getFullYear() - enteredDate.getFullYear();
+            let months = todayDate.getMonth() - enteredDate.getMonth();
+            let days = todayDate.getDate() - enteredDate.getDate();
+
+            if(months < 0){
+                years--;
+                months+= 12;
+            }
+
+            if(days < 0){
+                months--;
+                days+= new Date(todayDate.getFullYear(),todayDate.getMonth(),0).getDate();
+            }
+                document.getElementById("years").innerHTML = years.toString().padStart(2,'0');
+                document.getElementById("months").innerHTML = months.toString().padStart(2,'0');
+                document.getElementById("days").innerHTML = days.toString().padStart(2,'0');
+
+
+        }
+       </script>
+</body>
+</html>

@@ -45,3 +45,20 @@ View primes in the output area.
 
 
 *****TASK-3*****
+
+📱 Instagram Login Clone (Validation)
+A simple clone of Instagram's login form with basic JavaScript validation.
+
+✅ Features
+Username and password input with icons
+
+Inline error messages for empty or short inputs
+
+Remember Me checkbox and "Forgot Password?" link
+
+Minimal CSS styling
+
+🧠 Validation Logic
+Username is required
+
+Password is required and must be at least 8 characters
